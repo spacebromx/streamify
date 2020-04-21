@@ -1,8 +1,7 @@
 import React from "react";
 
 const Song = () => {
-  return (
-    <div>
+  return <div>
       <div className="imagen__container">
         <img src="" alt="caratula" />
       </div>
@@ -11,7 +10,6 @@ const Song = () => {
         <p>Name Song</p>
       </div>
     </div>
-  );
 };
 
 export default Song;

@@ -7,8 +7,7 @@ import Playbar from './components/playbar/Playbar'
 
 
 const App = () => {
-  return (
-    <div>
+  return <div>
       <Header />
       <Search />
       <HomeWidget />
@@ -16,7 +15,6 @@ const App = () => {
       <TopList />
       <Playbar />
     </div>
-  );
 }
 
 export default App
