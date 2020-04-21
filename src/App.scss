@@ -1,0 +1,14 @@
+$purple: #2A2283;
+$purple-variant: #2f155c;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.App {
+    background: transparent linear-gradient(180deg, $purple 0%, $purple-variant 100%) 0%
+    0% no-repeat padding-box;
+}

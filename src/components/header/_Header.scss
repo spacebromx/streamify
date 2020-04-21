@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+/*Variables*/
+$font-logo: "Alfa Slab One", cursive;
+$font-primry: "Manrope", sans-serif;
+$white: #ffffff;
+$black-one: #0000001F;
+$black-two: #00000029;
+
+/*Block*/
+.header {
+  width: 100%;
+  height: auto;
+}
+
+/*Element*/
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 79px 0 23px 0;
+}
+
+.header__logo__icon {
+  width: 71.86px;
+  height: auto;
+}
+
+.header__logo__brand {
+  font-family: $font-logo;
+  font-size: 50px;
+  text-align: center;
+  color: $white;
+  text-shadow: 0px 3px 3px $black-one;
+}
+
+.header__legend {
+  color: $white;
+  font-family: $font-primry;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 0px 3px 6px $black-two;
+}
+
+/*Modifier*/

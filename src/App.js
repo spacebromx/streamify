@@ -5,9 +5,10 @@ import HomeWidget from './components/home-widget/HomeWidget'
 import TopList from './components/topList/TopList'
 import Playbar from './components/playbar/Playbar'
 
+import './App.scss'
 
 const App = () => {
-  return <div>
+  return <div className="App">
       <Header />
       <Search />
       <HomeWidget />
