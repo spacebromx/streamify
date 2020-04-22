@@ -1,29 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-
-/*Variables*/
-$font-logo: "Alfa Slab One", "Arial Black", cursive;
-$font-primry: "Manrope", Arial, sans-serif;
-$white: #ffffff;
-$black-one: #0000001f;
-$black-two: #00000029;
-
-/*Functions/Mixins*/
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
-}
+@import "src/scss/Fonts";
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
 
 .header {
   width: 100%;
   height: auto;
   
   &__legend {
-    color: $white;
-    font-family: $font-primry;
+    color: white;
+    font-family: $font-primary;
     font-weight: 400;
     font-size: calculateRem(24px);
     text-align: center;
-    text-shadow: 0px 3px 6px $black-two;
+    text-shadow: 0 calculateRem(3px) calculateRem(6px) $black-two;
   }
 }
 
@@ -43,7 +32,7 @@ $black-two: #00000029;
     font-family: $font-logo;
     font-size: calculateRem(50px);
     text-align: center;
-    color: $white;
-    text-shadow: 0px 3px 3px $black-one;
+    color: white;
+    text-shadow: 0 calculateRem(3px) calculateRem(3px) $black-one;
   }
 }

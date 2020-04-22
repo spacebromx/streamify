@@ -1,10 +1,7 @@
 {
   "plugins": [
     ["module-resolver", {
-      "root": ["./src"],
-      "alias": {
-        "test": "./assets"
-      }
+      "root": ["./src"]
     }]
   ]
 }
