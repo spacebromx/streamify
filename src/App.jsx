@@ -1,14 +1,15 @@
 import React from 'react'
-import Header from './components/header/Header'
+import Header from './components/common/header/Header'
 import Search from './components/search/Search'
 import HomeWidget from './components/home-widget/HomeWidget'
 import TopList from './components/topList/TopList'
-import Playbar from './components/playbar/Playbar'
+import Playbar from './components/common/playbar/Playbar';
 
 import './App.scss'
 
 const App = () => {
-  return <div className="App">
+  return <main className="App">
+    <div className="container">
       <Header />
       <Search />
       <HomeWidget />
@@ -16,6 +17,7 @@ const App = () => {
       <TopList />
       <Playbar />
     </div>
+    </main>
 }
 
 export default App
