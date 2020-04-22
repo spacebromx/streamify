@@ -1,47 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 /*Variables*/
-$font-logo: "Alfa Slab One", cursive;
-$font-primry: "Manrope", sans-serif;
+$font-logo: "Alfa Slab One", "Arial Black", cursive;
+$font-primry: "Manrope", Arial, sans-serif;
 $white: #ffffff;
-$black-one: #0000001F;
+$black-one: #0000001f;
 $black-two: #00000029;
 
-/*Block*/
+/*Functions/Mixins*/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
 .header {
   width: 100%;
   height: auto;
+  
+  &__legend {
+    color: $white;
+    font-family: $font-primry;
+    font-weight: 400;
+    font-size: calculateRem(24px);
+    text-align: center;
+    text-shadow: 0px 3px 6px $black-two;
+  }
 }
 
-/*Element*/
-.header__logo {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 79px 0 23px 0;
-}
+  padding: calculateRem(79px) 0 calculateRem(23px) 0;
 
-.header__logo__icon {
-  width: 71.86px;
-  height: auto;
-}
+  &__icon {
+    width: 71.86px;
+    height: auto;
+  }
 
-.header__logo__brand {
-  font-family: $font-logo;
-  font-size: 50px;
-  text-align: center;
-  color: $white;
-  text-shadow: 0px 3px 3px $black-one;
+  &__brand {
+    font-family: $font-logo;
+    font-size: calculateRem(50px);
+    text-align: center;
+    color: $white;
+    text-shadow: 0px 3px 3px $black-one;
+  }
 }
-
-.header__legend {
-  color: $white;
-  font-family: $font-primry;
-  font-weight: 400;
-  font-size: 24px;
-  text-align: center;
-  text-shadow: 0px 3px 6px $black-two;
-}
-
-/*Modifier*/
