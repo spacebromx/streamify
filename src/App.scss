@@ -1,0 +1,12 @@
+@import "src/scss/Palette";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    background: transparent linear-gradient(180deg, $purple 0%, $purple-variant 100%) 0%
+    0% no-repeat padding-box;
+}

@@ -1,0 +1,38 @@
+@import "src/scss/Fonts";
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+
+.header {
+  width: 100%;
+  height: auto;
+  
+  &__legend {
+    color: white;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: calculateRem(24px);
+    text-align: center;
+    text-shadow: 0 calculateRem(3px) calculateRem(6px) $black-two;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: calculateRem(79px) 0 calculateRem(23px) 0;
+
+  &__icon {
+    width: 71.86px;
+    height: auto;
+  }
+
+  &__brand {
+    font-family: $font-logo;
+    font-size: calculateRem(50px);
+    text-align: center;
+    color: white;
+    text-shadow: 0 calculateRem(3px) calculateRem(3px) $black-one;
+  }
+}
