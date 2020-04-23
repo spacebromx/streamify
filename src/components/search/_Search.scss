@@ -1,0 +1,57 @@
+@import "src/scss/Fonts";
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+@import "src/scss/Utils";
+
+.search {
+  @extend .full-center;
+  @media screen and (max-width: 778px) {
+    padding: 0 calculateRem(20px);
+  }
+
+  &__container {
+    width: 100%;
+    max-width: calculateRem(778px);
+    height: calculateRem(59px);
+    border: 2px solid $cyan;
+    border-radius: calculateRem(38px);
+    display: flex;
+    overflow: hidden;
+    margin-top: calculateRem(90px);
+    margin-bottom: calculateRem(110px);
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    padding: calculateRem(13px) calculateRem(37px);
+    color: $gray-thin;
+    font-family: $font-primary;
+    font-size: calculateRem(24px);
+    outline: none;
+    transition: all 300ms ease;
+
+    &:focus {
+      background: #2A2283;
+      transition: all 300ms ease;
+    }
+
+    &::placeholder {
+      color: $gray-thin;
+      font-family: $font-primary;
+    }
+  }
+
+  &__icon {
+    @extend .full-center;
+    width: calculateRem(88px);
+    height: auto;
+    background-color: $cyan;
+  }
+
+  &__image {
+    font-size: calculateRem(31px);
+    color: $purple;
+  }
+}
