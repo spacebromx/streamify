@@ -29,7 +29,7 @@ class Search extends Component {
             onChange={this.handleChange}
           />
           <span className="search__icon">
-            <i class="fas fa-search search__image"></i>
+              <i className="fas fa-search search__image"/>
           </span>
         </div>
       </div>
