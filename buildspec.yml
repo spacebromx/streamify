@@ -16,6 +16,9 @@ phases:
       - yarn
   build:
     commands:
+      - echo Linting...
+      - yarn run lint:js
+      - yarn run lint:scss
       - echo Building...
       - yarn build
 artifacts:
