@@ -1,12 +1,12 @@
-@function calculateRem($size) {
+@function calculate-rem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
 
 @mixin clearfix {
-  &:after {
+  &::after {
     display: table;
     clear: both;
-    content: '';
+    content: "";
   }
 }

@@ -13,28 +13,39 @@
   &__header {
     text-align: left;
     font-size: 23px;
-    margin-bottom: calculateRem(26px);
+    margin-bottom: calculate-rem(26px);
     font-weight: 400;
   }
 
   &__content {
-    border-radius: calculateRem(18px);
-    background: transparent linear-gradient(180deg, $medium-purple 0, $dark-purple 100%) 0 0 no-repeat padding-box;
+    border-radius: calculate-rem(18px);
+    background: transparent
+      linear-gradient(180deg, $medium-purple 0, $dark-purple 100%) 0 0 no-repeat
+      padding-box;
     border: 2px solid $light-purple;
     padding: 2rem;
     display: flex;
   }
 
-  &__meta  {
-    fleX: 1;
+  &__meta {
+    flex: 1;
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
   }
 
+  &__play-icon {
+    @extend %text-with-shadow;
+
+    font-size: calculate-rem(24px);
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+  }
+
   &__picture {
-    max-width: calculateRem(140px);
-    max-height: calculateRem(140px);
+    max-width: calculate-rem(140px);
+    max-height: calculate-rem(140px);
     position: relative;
     display: flex;
 
@@ -56,19 +67,11 @@
     }
   }
 
-  &__play-icon {
-    @extend %text-with-shadow;
-    font-size: calculateRem(24px);
-    position: absolute;
-    top: calc(50% - 12px);
-    left: calc(50% - 12px);
-  }
-
   &__title {
     @extend %text-with-shadow;
 
-    font-size: calculateRem(28px);
-    margin-bottom: calculateRem(12px);
+    font-size: calculate-rem(28px);
+    margin-bottom: calculate-rem(12px);
 
     &--radio {
       color: $teal;
@@ -78,7 +81,7 @@
   &__description {
     @extend %text-with-shadow;
 
-    font-size: calculateRem(20px);
+    font-size: calculate-rem(20px);
   }
 
   &__bottom {
@@ -89,6 +92,6 @@
 
   &__meta-item {
     font-weight: 400;
-    font-size: calculateRem(14px);
+    font-size: calculate-rem(14px);
   }
 }
