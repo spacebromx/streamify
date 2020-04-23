@@ -22,6 +22,9 @@ const Playbar = () => {
           <button className="playbar__control">
             <i className="fas fa-forward"/>
           </button>
+          <button className="playbar__queue">
+            <i className="fas fa-list-ul"/> In queue: 25
+          </button>
         </div>
       </div>
     </div>

@@ -64,4 +64,28 @@
 
     font-weight: 500;
   }
+
+  &__queue {
+    background-color: $purple-darker;
+    font-size: calculateRem(10px);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    transition: background-color 300ms ease;
+    outline: none;
+
+    &:hover {
+      background-color: $dark-purple;
+      transition: background-color 300ms ease;
+    }
+
+    &:focus {
+      background-color: $dark-purple;
+      transition: background-color 300ms ease;
+    }
+  }
 }
