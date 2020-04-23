@@ -35,9 +35,9 @@ const App = () => {
         </div>
       </div>
       <TopList />
-      <Playbar />
     </div>
-    </main>
+    <Playbar />
+  </main>
 }
 
 export default App
