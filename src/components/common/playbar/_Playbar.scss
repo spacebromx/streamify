@@ -55,7 +55,7 @@
   &__song {
     @extend %text-with-shadow;
     font-family: "Manrope", Arial, sans-serif;
-    font-size: 22px;
+    font-size: calculateRem(22px);
     font-weight: bolder;
   }
 
