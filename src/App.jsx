@@ -3,7 +3,7 @@ import Header from './components/common/header/Header'
 import Search from './components/search/Search'
 import FeaturedWidget from './components/featured-widget/FeaturedWidget'
 import TopList from './components/topList/TopList'
-import Playbar from './components/common/playbar/Playbar';
+import Playbar from './components/common/playbar/Playbar'
 
 import './App.scss'
 import 'bulma/css/bulma.css'
@@ -11,8 +11,8 @@ import 'bulma/css/bulma.css'
 const App = () => {
   return <main className="App">
     <div className="container">
-      <Header />
-      <Search />
+      <Header/>
+      <Search/>
       <div className="columns is-variable is-6">
         <div className="column">
           <FeaturedWidget

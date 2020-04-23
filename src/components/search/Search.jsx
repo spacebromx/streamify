@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import "./_Search.scss";
+import React, { Component } from 'react'
+import './_Search.scss'
 
 class Search extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      query: "",
-    };
+      query: ''
+    }
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(e) {
     this.setState({
       query: e.target.value
-    });
+    })
   }
 
   render() {
@@ -29,12 +29,12 @@ class Search extends Component {
             onChange={this.handleChange}
           />
           <span className="search__icon">
-            <i class="fas fa-search search__image"></i>
+            <i className="fas fa-search search__image"/>
           </span>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Search;
+export default Search

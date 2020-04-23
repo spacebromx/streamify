@@ -7,6 +7,15 @@
 }
 
 .album-art {
+  &__play-icon {
+    @extend %text-with-shadow;
+
+    font-size: calculate-rem(14px);
+    position: absolute;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px);
+  }
+
   &__picture {
     position: relative;
     display: flex;
@@ -27,14 +36,5 @@
     &:hover {
       filter: none;
     }
-  }
-
-  &__play-icon {
-    @extend %text-with-shadow;
-
-    font-size: calculateRem(14px);
-    position: absolute;
-    top: calc(50% - 7px);
-    left: calc(50% - 7px);
   }
 }

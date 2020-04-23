@@ -8,7 +8,7 @@
 
 .playbar {
   background: transparent linear-gradient(180deg, $vivid-teal 0, $deep-blue 100%) 0 0 no-repeat padding-box;
-  box-shadow: 0 0 4px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.25);
   color: white;
   position: fixed;
   bottom: 0;
@@ -34,7 +34,7 @@
 
   &__control {
     border: none;
-    font-size: calculateRem(30px);
+    font-size: calculate-rem(30px);
     background-color: transparent;
     color: white;
     margin-left: 1rem;
@@ -48,14 +48,15 @@
 
     &:focus {
       color: $medium-purple;
-      outline: none ;
+      outline: none;
     }
   }
 
   &__song {
     @extend %text-with-shadow;
+
     font-family: "Manrope", Arial, sans-serif;
-    font-size: calculateRem(22px);
+    font-size: calculate-rem(22px);
     font-weight: bolder;
   }
 
@@ -67,7 +68,7 @@
 
   &__queue {
     background-color: $purple-darker;
-    font-size: calculateRem(10px);
+    font-size: calculate-rem(10px);
     font-weight: bold;
     border-radius: 20px;
     padding: 5px 10px;
