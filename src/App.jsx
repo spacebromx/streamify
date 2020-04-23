@@ -34,9 +34,9 @@ const App = () => {
           />
         </div>
       </div>
-      <TopList/>
-      <Playbar/>
+      <TopList />
     </div>
+    <Playbar />
   </main>
 }
 

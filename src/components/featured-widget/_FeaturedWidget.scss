@@ -10,6 +10,15 @@
   font-family: "Manrope", Arial, sans-serif;
   color: white;
 
+  a {
+    color: white;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
   &__header {
     text-align: left;
     font-size: 23px;

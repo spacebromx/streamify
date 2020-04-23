@@ -1,0 +1,40 @@
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+
+%text-with-shadow {
+  text-shadow: 0 3px 6px $black-two;
+  font-weight: 800;
+}
+
+.album-art {
+  &__play-icon {
+    @extend %text-with-shadow;
+
+    font-size: calculate-rem(14px);
+    position: absolute;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px);
+  }
+
+  &__picture {
+    position: relative;
+    display: flex;
+
+    &:hover {
+      .album-art__play-icon {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    margin-right: 2rem;
+    filter: contrast(0.4) blur(1px);
+    transition: filter 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
