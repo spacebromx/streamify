@@ -17,7 +17,11 @@ const FeaturedWidget = ({header, title, image, description, artist, year, genre,
         {!isRadio && <div className="featured-widget__bottom">
           <p className="featured-widget__meta-item">Year: {year}</p>
           <p className="featured-widget__meta-item">Genre: {genre}</p>
-          <p className="featured-widget__meta-item">+ Playlist</p>
+          <p className="featured-widget__meta-item">
+            <a href="#">
+              <i className="fas fa-plus-circle" /> Add to Playlist
+            </a>
+          </p>
         </div>}
       </div>
     </div>
