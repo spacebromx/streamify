@@ -20,38 +20,6 @@
     display: flex;
   }
 
-  &__picture {
-    max-width: calculateRem(50px);
-    max-height: calculateRem(50px);
-    position: relative;
-    display: flex;
-
-    &:hover {
-      .featured-widget__play-icon {
-        display: none;
-      }
-    }
-  }
-
-  &__image {
-    margin-right: 2rem;
-    filter: contrast(0.4) blur(1px);
-    transition: filter 0.5s ease;
-    cursor: pointer;
-
-    &:hover {
-      filter: none;
-    }
-  }
-
-  &__play-icon {
-    @extend %text-with-shadow;
-    font-size: calculateRem(14px);
-    position: absolute;
-    top: calc(50% - 7px);
-    left: calc(50% - 7px);
-  }
-
   &__meta {
     display: flex;
     flex: 1;

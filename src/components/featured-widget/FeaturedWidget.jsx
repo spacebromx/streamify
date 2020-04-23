@@ -2,16 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import AlbumArt from "../common/album-art/AlbumArt";
+
 import './_FeaturedWidget.scss'
 
 const FeaturedWidget = ({header, title, image, description, artist, year, genre, isRadio}) =>
   <div className="featured-widget">
     {header && <div className="featured-widget__header">{header}</div>}
     <div className="featured-widget__content">
-      <div className="featured-widget__picture">
-        <img src={image} className="featured-widget__image" alt={title}/>
-        <i className="fas fa-play featured-widget__play-icon" />
-      </div>
+      <AlbumArt width={140} height={140} image={image} />
       <div className="featured-widget__meta">
         <h2 className={cx('featured-widget__title', {'featured-widget__title--radio': isRadio})}>{title}</h2>
         <p className="featured-widget__description">{isRadio ? description : artist}</p>
