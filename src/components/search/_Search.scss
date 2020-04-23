@@ -1,0 +1,49 @@
+@import "src/scss/Fonts";
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+@import "src/scss/Utils";
+
+.search {
+  @extend .full-center;
+  @media screen and (max-width: 778px) {
+    padding: 0 calculateRem(20px);
+  }
+}
+
+.search__container {
+  width: 100%;
+  max-width: calculateRem(778px);
+  height: calculateRem(59px);
+  border: 2px solid $cyan;
+  border-radius: calculateRem(38px);
+  display: flex;
+  overflow: hidden;
+  margin-top: calculateRem(90px);
+}
+
+.search__input {
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  padding: calculateRem(13px) calculateRem(37px);
+  color: $gray-thin;
+  font-family: $font-primary;
+  font-size: calculateRem(24px);
+
+  &::placeholder {
+    color: $gray-thin;
+    font-family: $font-primary;
+  }
+}
+
+.search__icon {
+  @extend .full-center;
+  width: calculateRem(88px);
+  height: auto;
+  background-color: $cyan;
+}
+
+.search__image {
+  width: calculateRem(31.58px);
+  height: calculateRem(31.58px);
+}
