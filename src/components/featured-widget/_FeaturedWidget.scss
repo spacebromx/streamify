@@ -58,7 +58,7 @@
 
   &__play-icon {
     @extend %text-with-shadow;
-    font-size: 24px;
+    font-size: calculateRem(24px);
     position: absolute;
     top: calc(50% - 12px);
     left: calc(50% - 12px);
@@ -67,7 +67,7 @@
   &__title {
     @extend %text-with-shadow;
 
-    font-size: 28px;
+    font-size: calculateRem(28px);
     margin-bottom: calculateRem(12px);
 
     &--radio {
