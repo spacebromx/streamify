@@ -14,11 +14,11 @@ phases:
     commands:
       - echo Installing dependencies...
       - yarn
-  build:
-    commands:
       - echo Linting...
       - yarn run lint:js
       - yarn run lint:scss
+  build:
+    commands:
       - echo Building...
       - yarn build
 artifacts:
