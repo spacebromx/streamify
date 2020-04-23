@@ -29,6 +29,7 @@ FeaturedWidget.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   artist: PropTypes.string,
+  description: PropTypes.string,
   year: PropTypes.string,
   genre: PropTypes.string,
   isRadio: PropTypes.bool
