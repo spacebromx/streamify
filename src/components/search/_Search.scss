@@ -19,6 +19,7 @@
   display: flex;
   overflow: hidden;
   margin-top: calculateRem(90px);
+  margin-bottom: calculateRem(110px);
 }
 
 .search__input {
@@ -44,6 +45,6 @@
 }
 
 .search__image {
-  width: calculateRem(31.58px);
-  height: calculateRem(31.58px);
+  font-size: calculateRem(31px);
+  color: $purple;
 }

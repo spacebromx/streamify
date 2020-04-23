@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import "./_Search.scss";
-import searchIcon from "assets/search-solid.png";
 
 class Search extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      query: " ",
+      query: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -19,20 +18,22 @@ class Search extends Component {
   }
 
   render() {
-    return <div className="search">
-             <div className="search__container">
-               <input
-                 className="search__input"
-                 type="text"
-                 placeholder="Search here..."
-                 value={this.state.query}
-                 onChange={this.handleChange}
-               />
-               <span className="search__icon">
-                 <img className="search__image" src={searchIcon} alt="search icon" />
-               </span>
-             </div>
-           </div>
+    return (
+      <div className="search">
+        <div className="search__container">
+          <input
+            className="search__input"
+            type="text"
+            placeholder="Search here..."
+            value={this.state.query}
+            onChange={this.handleChange}
+          />
+          <span className="search__icon">
+            <i class="fas fa-search search__image"></i>
+          </span>
+        </div>
+      </div>
+    );
   }
 }
 
