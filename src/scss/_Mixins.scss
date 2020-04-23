@@ -2,3 +2,11 @@
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}

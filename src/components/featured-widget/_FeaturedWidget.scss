@@ -1,0 +1,94 @@
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+
+%text-with-shadow {
+  text-shadow: 0 3px 6px $black-two;
+  font-weight: 800;
+}
+
+.featured-widget {
+  font-family: "Manrope", Arial, sans-serif;
+  color: white;
+
+  &__header {
+    text-align: left;
+    font-size: 23px;
+    margin-bottom: calculateRem(26px);
+    font-weight: 400;
+  }
+
+  &__content {
+    border-radius: calculateRem(18px);
+    background: transparent linear-gradient(180deg, $medium-purple 0, $dark-purple 100%) 0 0 no-repeat padding-box;
+    border: 2px solid $light-purple;
+    padding: 2rem;
+    display: flex;
+  }
+
+  &__meta  {
+    fleX: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+
+  &__picture {
+    max-width: calculateRem(140px);
+    max-height: calculateRem(140px);
+    position: relative;
+    display: flex;
+
+    &:hover {
+      .featured-widget__play-icon {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    margin-right: 2rem;
+    filter: contrast(0.4) blur(1px);
+    transition: filter 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  &__play-icon {
+    @extend %text-with-shadow;
+    font-size: calculateRem(24px);
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+  }
+
+  &__title {
+    @extend %text-with-shadow;
+
+    font-size: calculateRem(28px);
+    margin-bottom: calculateRem(12px);
+
+    &--radio {
+      color: $teal;
+    }
+  }
+
+  &__description {
+    @extend %text-with-shadow;
+
+    font-size: calculateRem(20px);
+  }
+
+  &__bottom {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+  }
+
+  &__meta-item {
+    font-weight: 400;
+    font-size: calculateRem(14px);
+  }
+}
