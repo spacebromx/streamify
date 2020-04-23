@@ -19,9 +19,7 @@
 
   &__content {
     border-radius: calculate-rem(18px);
-    background: transparent
-      linear-gradient(180deg, $medium-purple 0, $dark-purple 100%) 0 0 no-repeat
-      padding-box;
+    background: transparent linear-gradient(180deg, $medium-purple 0, $dark-purple 100%) 0 0 no-repeat padding-box;
     border: 2px solid $light-purple;
     padding: 2rem;
     display: flex;

@@ -17,16 +17,18 @@
   "scripts": {
     "build": "NODE_ENV=production parcel build src/index.html --public-url ./",
     "watch": "NODE_ENV=development parcel src/index.html --open",
-    "precommit": "lint-staged",
     "lint:js": "eslint src/ --ext .js --ext .jsx",
     "lint:js:fix": "eslint src --fix",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
     "lint:scss:fix": "stylelint 'src/**/*.scss' --syntax scss --fix"
   },
   "lint-staged": {
-    "*.{js,jsx,json,scss,css,md}": [
-      "prettier --write",
-      "git add"
+    "**/*.{js,jsx}": [
+      "eslint --fix"
+    ],
+    "**/*.scss": [
+      "stylefmt",
+      "stylelint --syntax scss --fix"
     ]
   },
   "eslintConfig": {

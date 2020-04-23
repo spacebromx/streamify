@@ -2,11 +2,11 @@
   "plugins": ["stylelint-selector-bem-pattern"],
   "extends": "stylelint-config-standard",
   "rules": {
-    "color-hex-case": "upper",
+    "color-hex-case": "lower",
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["extend", "ignores", "mixin", "function", "return"]
+        "ignoreAtRules": ["extend", "ignores", "mixin", "function", "return", "import"]
       }
     ],
     "unit-whitelist": [
