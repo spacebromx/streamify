@@ -27,8 +27,7 @@
       "eslint --fix"
     ],
     "**/*.scss": [
-      "stylefmt",
-      "stylelint --syntax scss --fix"
+      "stylelint 'src/**/*.scss' --syntax scss --fix"
     ]
   },
   "eslintConfig": {
