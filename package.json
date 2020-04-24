@@ -9,6 +9,9 @@
     "babel-jest": "^25.4.0",
     "bulma": "^0.8.2",
     "classnames": "^2.2.6",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "jest-cli": "^25.4.0",
     "jest-transform-stub": "^2.0.0",
     "prop-types": "^15.7.2",
@@ -16,12 +19,15 @@
     "react-dom": "^16.13.1",
     "react-props": "^0.0.3",
     "react-router-dom": "^5.1.2",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "serve": "^11.3.0"
   },
   "scripts": {
-    "build": "NODE_ENV=production parcel build src/index.html --public-url ./",
+    "build": "NODE_ENV=production parcel build src/index.html --public-url /",
     "watch": "NODE_ENV=development parcel src/index.html",
-    "start": "parcel src/index.html --open",
+    "dev": "parcel src/index.html --open",
+    "server": "node server.js",
+    "start": "concurrently \"yarn run build\" \"yarn run server\"",
     "lint:js": "eslint src/ --ext .js --ext .jsx",
     "lint:js:fix": "eslint src --fix",
     "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",

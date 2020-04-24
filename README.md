@@ -1,69 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![AWS CodeBuild Status](https://codebuild.us-east-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoic3JmZ3MwSFVYRldBQVYxWkhxcnJMSVBvb2VSdXNHWWZQaVlaTERxQnV6cmtPTUk3OTcxMVRHNGZBckx5eVlTVlJYRmZBMlMzMVM4bTU1TnNzTm04VHRvPSIsIml2UGFyYW1ldGVyU3BlYyI6IitGMVFlSHcvaFRYMkwzdEkiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0=&branch=master)
 
-## Available Scripts
+# Streamify
 
-In the project directory, you can run:
+This is a sample project that makes use of several tools and libraries. The main goal of this repo is to mix up all this tooling bundle and create a modern web app. It's more of an exercise rather than a guide.
 
-### `yarn start`
+## Tools and Libraries
+Since there are a lot of tools out there, I chose what I have experience with. Probably there's a lot more out there but this stack made sense to me and got the job done.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React with hooks and the *new* context API
+- React Router
+- The free [Deezer API](https://developers.deezer.com/api).
+-  Fetch API and async/await for data fetching
+-  Jest + Enzyme for unit testing
+-  Cypress.io for end to end testing
+-  yarn for package management
+-  ParcelJS for bundling the code
+-  ESLint, Prettier and Stylelint to keep the code nice and tidy
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Requirements
 
-### `yarn test`
+ - NodeJs ^12 ([download](https://nodejs.org/en/download/))
+ - yarn  ^1.2 ([install](https://classic.yarnpkg.com/en/docs/install/#mac-stable))
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scripts
 
-### `yarn build`
+There are a few scripts available inside the file `package.json`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Bundling/Building
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+ - **yarn run dev**: Will compile the bundle and open a dev server in the port `1234`
+ - **yarn run watch**: The same as the dev but with watch/hot reload enabled
+ - **yarn run build**: Will create a bundle ready for production with minification and source maps enabled
+ - **yarn run server**: Will run the express server to serve the static files and handle the routing
+ - **yarn run start**: Will create a production ready bundle and open the express server in port `5000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Linting
 
-### `yarn eject`
+ - **yarn run lint:js**: Will execute ESLint in all the js/jsx files
+ - **yarn run lint:js:fix**: Same as above but will fix the issues that are auto-fixable
+ - **yarn run lint:scss**: Will execute Stylelint in all the scss files
+ - **yarn run lint:scss:fix**: Same as above but will fix the issues that are auto-fixable
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Testing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **yarn run test:watch**: Will run Enzyme in watch mode
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# streamify
