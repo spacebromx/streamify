@@ -1,0 +1,48 @@
+@import 'src/scss/Fonts';
+@import 'src/scss/Palette';
+@import 'src/scss/Mixins';
+
+%text-with-shadow {
+  text-shadow: 0 3px 6px $black-two;
+}
+
+.song {
+  width: 100%;
+  height: calculate-rem(69px);
+  padding: calculate-rem(17px) 0;
+  box-sizing: border-box;
+  border-top: 1px solid $regular-purple;
+  font-family: $font-primary;
+  color: white;
+
+  &__content {
+    display: flex;
+  }
+
+  &__meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: calculate-rem(12px);
+  }
+
+  &__title {
+    @extend %text-with-shadow;
+
+    font-size: calculate-rem(15px);
+    line-height: calculate-rem(21px);
+    font-weight: 800;
+  }
+
+  &__artist {
+    @extend %text-with-shadow;
+
+    font-size: calculate-rem(11px);
+    line-height: calculate-rem(15px);
+    font-weight: 400;
+  }
+
+  &:first-child {
+    border-top: 0;
+  }
+}

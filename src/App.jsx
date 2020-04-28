@@ -34,9 +34,25 @@ const App = () => {
           />
         </div>
       </div>
-      <TopList />
+      <div className="columns is-multiline is-variable is-6">
+        <div className="column is-one-third-desktop is-half-tablet is-full-mobile">
+          <TopList
+            genre="Pop"
+          />
+        </div>
+        <div className="column is-one-third-desktop is-half-tablet is-full-mobile">
+          <TopList
+            genre="Rock"
+          />
+        </div>
+        <div className="column is-one-third-desktop is-half-tablet is-full-mobile">
+          <TopList
+            genre="Rap"
+          />
+        </div>
+      </div>
     </div>
-    <Playbar />
+    <Playbar/>
   </main>
 }
 
