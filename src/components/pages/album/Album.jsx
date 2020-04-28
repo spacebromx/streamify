@@ -56,7 +56,7 @@ const Album = () => {
             {albumInfo.title}
           </h1>
           <h2 className="section__subtitle">
-            <Link to={`/artist/${albumInfo.artist.id}`}>{albumInfo.artist?.name}</Link>
+            <Link to={`/artist/${albumInfo.artist.id}`}>{albumInfo.artist.name}</Link>
           </h2>
           <Tracklist tracks={albumInfo.tracks.data} />
         </div>
