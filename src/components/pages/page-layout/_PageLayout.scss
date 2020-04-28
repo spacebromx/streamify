@@ -1,0 +1,69 @@
+@import "src/scss/Fonts";
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+
+  &__title {
+    font-family: $font-logo;
+    font-size: calculate-rem(50px);
+    line-height: 3rem;
+    color: white;
+    text-shadow: 0 calculate-rem(3px) calculate-rem(3px) $black-one;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-weight: 800;
+    font-size: calculate-rem(30px);
+    font-family: $font-primary;
+    text-shadow: 0 3px 6px $black-two;
+
+    a {
+      color: white;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__cover {
+    margin-bottom: 3rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    margin-bottom: calculate-rem(12px);
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__explicit {
+    background-color: red;
+    border-radius: 12px;
+    padding: calculate-rem(2px) calculate-rem(10px);
+    flex: 1;
+    text-transform: lowercase;
+  }
+
+  &__back {
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
