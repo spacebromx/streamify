@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {Link, useParams} from 'react-router-dom'
 import {API_URL} from 'constants'
 import {fetchInfo} from 'utils'
 import PageLayout from 'components/pages/page-layout/PageLayout'
 import Playbar from 'components/common/playbar/Playbar'
 import Tracklist from 'components/common/tracklist/Tracklist'
+import { useQuery } from 'react-query'
 
 const Album = () => {
-  const [albumInfo, setAlbumInfo] = useState({})
   const {album} = useParams()
+  const fetchData = async () => await fetchInfo(`${API_URL}/album/${album}`)
+  const {data: albumInfo} = useQuery('artist', fetchData)
 
-  useEffect(() => {
-    (async () => {
-      setAlbumInfo(await fetchInfo(`${API_URL}/album/${album}`))
-    })()
-  }, [])
+  console.log(albumInfo)
 
   return <main className="App">
-    {albumInfo?.error?.code === 800
+    {albumInfo.error
       ? <div className="container" style={{textAlign: 'center'}}>
         <span className="logo__brand">No data found</span>
         <p>The album ID has not returned any information. Try a different one</p>
@@ -27,28 +25,28 @@ const Album = () => {
       </div>
       : <PageLayout>
         <div className="column is-4">
-          <img src={albumInfo?.cover_big} alt={albumInfo?.title} className="section__cover"/>
+          <img src={albumInfo.cover_big} alt={albumInfo.title} className="section__cover"/>
           <div className="section__meta">
             <div className="section__info">
               <p className="section__name">Rating</p>
-              <p className="section__value">{albumInfo?.rating}</p>
+              <p className="section__value">{albumInfo.rating}</p>
             </div>
             <div className="section__info">
               <p className="section__name">Fans</p>
-              <p className="section__value">{albumInfo?.fans}</p>
+              <p className="section__value">{albumInfo.fans}</p>
             </div>
             <div className="section__info">
               <p className="section__name">Genre</p>
               <p className="section__value">
-                {albumInfo?.genres?.data?.[0]?.name}
+                {albumInfo.genres.data[0].name}
               </p>
             </div>
             <div className="section__info">
               <p className="section__name">Release date</p>
-              <p className="section__value">{albumInfo?.release_date}</p>
+              <p className="section__value">{albumInfo.release_date}</p>
             </div>
             <div className="section__info">
-              {albumInfo?.explicit_lyrics && <p><span className="section__explicit">explicit</span></p>}
+              {albumInfo.explicit_lyrics && <p><span className="section__explicit">explicit</span></p>}
             </div>
             <Link to="/" className="section__back">&larr; Back to home</Link>
           </div>
@@ -58,9 +56,9 @@ const Album = () => {
             {albumInfo.title}
           </h1>
           <h2 className="section__subtitle">
-            <a href={`/artist/${albumInfo?.artist?.id}`}>{albumInfo?.artist?.name}</a>
+            <Link to={`/artist/${albumInfo.artist.id}`}>{albumInfo.artist?.name}</Link>
           </h2>
-          <Tracklist tracks={albumInfo?.tracks?.data} />
+          <Tracklist tracks={albumInfo.tracks.data} />
         </div>
       </PageLayout>
     }

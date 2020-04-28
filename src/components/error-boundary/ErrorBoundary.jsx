@@ -14,7 +14,6 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.errorInfo) {
-      console.log(this.state.errorInfo)
       return <main className="App">
         <div className="container">
           <Header
@@ -35,7 +34,7 @@ class ErrorBoundary extends React.Component {
 }
 
 ErrorBoundary.propTypes = {
-  children: PropTypes.array
+  children: PropTypes.object
 }
 
 export default ErrorBoundary
