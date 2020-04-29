@@ -23,7 +23,7 @@ const Routes = () =>
   <Router>
     <ReactQueryConfigProvider config={queryConfig}>
       <Helmet>
-        <title>Steamify</title>
+        <title>Streamify</title>
       </Helmet>
       <Switch>
         <Route exact path="/">
