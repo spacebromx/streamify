@@ -2,7 +2,6 @@ import React from 'react'
 import {Link, useParams} from 'react-router-dom'
 import {Helmet} from 'react-helmet'
 import {API_URL} from 'constants'
-// eslint-disable-next-line no-unused-vars
 import {fetchInfo, generatePageTitle} from 'utils'
 import PageLayout from 'components/pages/page-layout/PageLayout'
 import Playbar from 'components/common/playbar/Playbar'
