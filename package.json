@@ -30,6 +30,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
     "react-props": "^0.0.3",
     "react-query": "^1.2.9",
     "react-router-dom": "^5.1.2",

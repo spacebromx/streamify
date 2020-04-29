@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Helmet} from 'react-helmet'
+import {generatePageTitle} from 'utils'
 import Header from 'components/common/header/Header'
 
 class ErrorBoundary extends React.Component {
@@ -15,6 +17,9 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.errorInfo) {
       return <main className="App">
+        <Helmet>
+          <title>{generatePageTitle('An error has occurred')}</title>
+        </Helmet>
         <div className="container">
           <Header
             title="Oops, something went wrong"

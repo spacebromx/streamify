@@ -1,5 +1,6 @@
 import React, {lazy, Suspense} from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import {Helmet} from 'react-helmet'
 import Modal from '../modals/Modal'
 import App from '../../App'
 import {ReactQueryConfigProvider} from 'react-query'
@@ -21,6 +22,9 @@ const loadingModal = <Modal>
 const Routes = () =>
   <Router>
     <ReactQueryConfigProvider config={queryConfig}>
+      <Helmet>
+        <title>Steamify</title>
+      </Helmet>
       <Switch>
         <Route exact path="/">
           <App />
