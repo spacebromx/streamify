@@ -1,15 +1,24 @@
-import React from "react";
+import React from 'react'
+import PropTypes from 'prop-types'
+import './_Song.scss'
+import AlbumArt from '/components/common/album-art/AlbumArt'
 
-const Song = () => {
-  return <div>
-    <div className="imagen__container">
-      <img src="" alt="caratula" />
-    </div>
-    <div className="song__data">
-      <h3>Artists</h3>
-      <p>Name Song</p>
+const Song = ({ image, title, artist }) => {
+  return <div className="song">
+    <div className="song__content">
+      <AlbumArt width={35} height={35} image={image} />
+      <div className="song__meta">
+        <h2 className="song__title">{title}</h2>
+        <p className="song__artist">{artist}</p>
+      </div>
     </div>
   </div>
-};
+}
 
-export default Song;
+Song.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  artist: PropTypes.string.isRequired
+}
+
+export default Song

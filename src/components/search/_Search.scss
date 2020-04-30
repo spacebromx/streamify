@@ -6,6 +6,8 @@
 .search {
   @extend .full-center;
 
+  padding: calculate-rem(90px) 0 calculate-rem(110px) 0;
+
   @media screen and (max-width: 778px) {
     padding: 0 calculate-rem(20px);
   }
@@ -18,8 +20,6 @@
     border-radius: calculate-rem(38px);
     display: flex;
     overflow: hidden;
-    margin-top: calculate-rem(90px);
-    margin-bottom: calculate-rem(110px);
   }
 
   &__input {

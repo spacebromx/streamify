@@ -1,0 +1,33 @@
+@import 'src/scss/Palette';
+@import 'src/scss/Fonts';
+@import 'src/scss/Mixins';
+
+%text-with-shadow {
+  text-shadow: 0 3px 6px $black-two;
+  font-weight: 800;
+}
+
+.top-list {
+  font-family: $font-primary;
+  color: white;
+  padding: calculate-rem(110px) 0 calculate-rem(106px) 0;
+
+  &__header {
+    text-align: left;
+    font-size: calculate-rem(23px);
+    margin-bottom: calculate-rem(15px);
+    font-weight: 400;
+  }
+
+  &__content {
+    border-radius: calculate-rem(12px);
+    background:
+      transparent
+      linear-gradient(180deg, $medium-purple 0, $dark-purple 100%) 0 0 no-repeat
+      padding-box;
+    border: 2px solid $light-purple;
+    padding: calculate-rem(11px) calculate-rem(28px);
+    display: flex;
+    flex-direction: column;
+  }
+}

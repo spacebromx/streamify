@@ -8,7 +8,7 @@ import './_FeaturedWidget.scss'
 
 const FeaturedWidget = ({header, title, image, description, artist, year, genre, isRadio}) =>
   <div className="featured-widget">
-    {header && <div className="featured-widget__header">{header}</div>}
+    {header.length && <div className="featured-widget__header">{header}</div>}
     <div className="featured-widget__content">
       <AlbumArt width={140} height={140} image={image} />
       <div className="featured-widget__meta">
