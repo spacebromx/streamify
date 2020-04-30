@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import {useQuery} from 'react-query'
+import {Helmet} from 'react-helmet'
 import {API_URL} from 'constants'
-import {fetchInfo} from 'utils'
+import {fetchInfo, generatePageTitle} from 'utils'
 import PageLayout from 'components/pages/page-layout/PageLayout'
 import Playbar from 'components/common/playbar/Playbar'
 import Tracklist from 'components/common/tracklist/Tracklist'
@@ -16,6 +17,9 @@ const Artist = () => {
 
   return <main className="App">
     {Object.keys((artistInfo).length > 0) ? <PageLayout>
+      <Helmet>
+        <title>{generatePageTitle(`Archive: ${artistInfo.name ?? ''}`)}</title>
+      </Helmet>
       <div className="column is-4">
         <img src={artistInfo.picture_big} alt={artistInfo.title} className="section__cover"/>
         <div className="section__meta">
@@ -32,6 +36,9 @@ const Artist = () => {
         <Tracklist tracks={tracklist.data} />
       </div>
     </PageLayout> : <div className="container" style={{textAlign: 'center'}}>
+      <Helmet>
+        <title>{generatePageTitle('Error 404')}</title>
+      </Helmet>
       <span className="logo__brand">No data found</span>
       <p>The artist ID has not returned any information. Try a different one</p>
       <p>

@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link, useParams} from 'react-router-dom'
+import {Helmet} from 'react-helmet'
 import {API_URL} from 'constants'
-import {fetchInfo} from 'utils'
+import {fetchInfo, generatePageTitle} from 'utils'
 import PageLayout from 'components/pages/page-layout/PageLayout'
 import Playbar from 'components/common/playbar/Playbar'
 import Tracklist from 'components/common/tracklist/Tracklist'
@@ -12,11 +13,12 @@ const Album = () => {
   const fetchData = async () => await fetchInfo(`${API_URL}/album/${album}`)
   const {data: albumInfo} = useQuery('artist', fetchData)
 
-  console.log(albumInfo)
-
   return <main className="App">
     {albumInfo.error
       ? <div className="container" style={{textAlign: 'center'}}>
+        <Helmet>
+          <title>{generatePageTitle('Error 404')}</title>
+        </Helmet>
         <span className="logo__brand">No data found</span>
         <p>The album ID has not returned any information. Try a different one</p>
         <p>
@@ -24,6 +26,9 @@ const Album = () => {
         </p>
       </div>
       : <PageLayout>
+        <Helmet>
+          <title>{generatePageTitle(`Album: ${albumInfo.title} by ${albumInfo.artist.name}`)}</title>
+        </Helmet>
         <div className="column is-4">
           <img src={albumInfo.cover_big} alt={albumInfo.title} className="section__cover"/>
           <div className="section__meta">
@@ -38,7 +43,7 @@ const Album = () => {
             <div className="section__info">
               <p className="section__name">Genre</p>
               <p className="section__value">
-                {albumInfo.genres.data[0].name}
+                {albumInfo.genres.data[0]?.name ?? 'N/A'}
               </p>
             </div>
             <div className="section__info">

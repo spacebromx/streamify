@@ -8,3 +8,5 @@ export const fetchInfo = async url => {
     console.log('Error', err)
   }
 }
+
+export const generatePageTitle = (title = '', separator = '-') => `Streamify ${separator} ${title}`
