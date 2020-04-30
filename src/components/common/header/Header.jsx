@@ -1,16 +1,29 @@
 import React from 'react';
-import './_Header.scss'
+import PropTypes from 'prop-types'
 import imageLogo from 'assets/compact-disc-solid.png'
 
-const Header = () => {
+import './_Header.scss'
+
+const Header = ({title, subtitle}) => {
   return <header className="header">
     <div className="logo">
       <img className="logo__icon" src={imageLogo} alt="logo streamify"/>
-      <span className="logo__brand">Streamify</span>
+      <span className="logo__brand">{title}</span>
     </div>
-    <p className="header__legend">We have over 2,000 songs, ready for you. Search, play and enjoy. <br/> Start typing
-      and search through our catalog</p>
+    <p className="header__legend" dangerouslySetInnerHTML={{__html: subtitle}} />
   </header>
+}
+
+Header.displayName = 'Header'
+
+Header.defaultProps = {
+  title: 'Streamify',
+  subtitle: 'We have over 2,000 songs, ready for you. Search, play and enjoy. <br/> Start typing and search through our catalog'
+}
+
+Header.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string
 }
 
 export default Header;

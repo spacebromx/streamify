@@ -20,10 +20,12 @@ html {
 .App {
   background:
     transparent
-    linear-gradient(180deg, $purple 0%, $purple-variant 100%) 0 0 no-repeat
+    linear-gradient(180deg, $purple 0, $purple-variant 100%) 0 0 no-repeat
     padding-box;
   height: auto;
   padding-bottom: calculate-rem(108px);
+  color: white;
+  min-height: 100vh;
 }
 
 .container {

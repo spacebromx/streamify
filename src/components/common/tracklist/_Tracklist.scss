@@ -1,0 +1,40 @@
+@import "src/scss/Fonts";
+@import "src/scss/Palette";
+@import "src/scss/Mixins";
+
+.tracklist {
+  margin: 16px 0;
+}
+
+.track {
+  display: flex;
+  padding: calculate-rem(10px) 0;
+  border-bottom: 1px solid #c28bf626;
+
+  &__title {
+    font-family: $font-primary;
+    flex: 1;
+    font-size: calculate-rem(18px);
+    font-weight: 500;
+  }
+
+  &__control {
+    color: white;
+    cursor: pointer;
+    background-color: $purple-darker;
+    border: 1px solid $light-purple;
+    border-radius: 10px;
+    padding: calculate-rem(4px) calculate-rem(10px);
+    transition: all 300ms ease;
+
+    &:hover {
+      background-color: $light-purple;
+      border-color: $purple-darker;
+      transition: all 300ms ease;
+    }
+
+    &:first-of-type {
+      margin-right: calculate-rem(10px);
+    }
+  }
+}
