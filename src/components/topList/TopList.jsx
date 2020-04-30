@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Song from '../song/Song'
+import Song from '/components/song/Song'
 import './_TopList.scss'
 
-const TopList = ({ genre }) => {
+const TopList = ({ title }) => {
   return <div className="top-list">
     <div className="top-list__header">
-      <h2>Top {genre}</h2>
+      <h2>{title}</h2>
     </div>
     <div className="top-list__content">
       <Song
@@ -54,7 +54,7 @@ const TopList = ({ genre }) => {
 }
 
 TopList.propTypes = {
-  genre: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 }
 
 export default TopList

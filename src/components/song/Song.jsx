@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './_Song.scss'
-import AlbumArt from '../common/album-art/AlbumArt'
+import AlbumArt from '/components/common/album-art/AlbumArt'
 
 const Song = ({ image, title, artist }) => {
   return <div className="song">

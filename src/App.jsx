@@ -37,17 +37,17 @@ const App = () => {
       <div className="columns is-multiline is-variable is-6">
         <div className="column is-one-third-desktop is-half-tablet is-full-mobile">
           <TopList
-            genre="Pop"
+            title="Top Pop"
           />
         </div>
         <div className="column is-one-third-desktop is-half-tablet is-full-mobile">
           <TopList
-            genre="Rock"
+            title="Top Rock"
           />
         </div>
         <div className="column is-one-third-desktop is-half-tablet is-full-mobile">
           <TopList
-            genre="Rap"
+            title="Top Rap"
           />
         </div>
       </div>
